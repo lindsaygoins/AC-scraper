@@ -14,13 +14,13 @@ def gather_diys():
 
     return diy
 
-def create_diy_file():
+def create_file():
     diy = gather_diys()
-    f = open("diy.txt", "a")
+    f = open("../data/diy.txt", "a")
     for key in diy:
         for item in diy[key]:
             query = "(" + item + "," + key + "," + "0" + "," + "0" + ")" + ","
             f.write(query)
     f.close()
 
-create_diy_file()
+create_file()
