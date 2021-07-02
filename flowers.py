@@ -24,5 +24,26 @@ def get_flowers():
     flowers.remove("Orange Windflower")
     flowers.remove("Lily of the Valley")
 
-    return flowers
+    flower_dict = {
+        "Rose": flowers[:6],
+        "Tulip": flowers[6:10],
+        "Hyacinth": flowers[10:14],
+        "Mum": flowers[14:17],
+        "Pansy": flowers[17:20],
+        "Lily": flowers[20:23],
+        "Windflower": flowers[23:26],
+        "Cosmos": flowers[26:]
+    }
 
+    return flower_dict
+
+def create_file():
+    flowers = get_flowers()
+    f = open("data/flowers.txt", "a")
+    for key in flowers:
+        for item in flowers[key]:
+            query = "(" + key + "," + item + "," + "0" + ")" + ","
+            f.write(query)
+    f.close()
+
+create_file()
