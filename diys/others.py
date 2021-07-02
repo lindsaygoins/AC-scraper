@@ -19,5 +19,3 @@ def get_others():
         else:
             others.append(text)
     return others
-
-print(get_others())
