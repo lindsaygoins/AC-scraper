@@ -3,12 +3,11 @@ import equipment, fences, housewares, miscellaneous, others, tools, wall_floor_r
 def gather_diys():
     diy = dict()
 
-    diy["Accessory"] = equipment.get_accessories()
-    diy["Fence"] = fences.get_fences()
-    diy["Houseware"] = housewares.get_housewares()
+    diy["Equipment"] = equipment.get_equipment()
+    diy["Housewares"] = housewares.get_housewares()
     diy["Miscellaneous"] = miscellaneous.get_misc()
-    diy["Other"] = others.get_others()
-    diy["Tool"] = tools.get_tools()
+    diy["Other"] = others.get_others() + fences.get_fences()
+    diy["Tools"] = tools.get_tools()
     diy["Wall/Floor/Rug"] = wall_floor_rugs.get_wall_floor_rugs()
     diy["Wall-Mounted"] = wall_mounts.get_wall_mounts()
 
