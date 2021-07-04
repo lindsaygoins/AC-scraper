@@ -42,7 +42,7 @@ def create_file():
         query = "(" + key + ","
         for item in bugs[key]:
             query += item + ","
-        query += "0" + ")" + ","
+        query += "1" + ")" + ","
         f.write(query)
     f.close()
 
