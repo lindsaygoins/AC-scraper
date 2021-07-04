@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def get_accessories():
+def get_equipment():
     URL = "https://game8.co/games/Animal-Crossing-New-Horizons/archives/286679"
     page = requests.get(URL)
 
@@ -11,11 +11,11 @@ def get_accessories():
     elements = soup.find_all("td", class_="center")
 
     # Filter out a few outliers
-    accessories = []
+    equipment = []
     for elem in elements:
         text = elem.text.strip()
         if text == "List of DIY Recipes":
             break
         if text != "Currently no items to display.":
-            accessories.append(text)
-    return accessories
+            equipment.append(text)
+    return equipment

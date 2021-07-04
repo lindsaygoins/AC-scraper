@@ -1,9 +1,9 @@
-import accessories, fences, housewares, miscellaneous, others, tools, wall_floor_rugs, wall_mounts
+import equipment, fences, housewares, miscellaneous, others, tools, wall_floor_rugs, wall_mounts
 
 def gather_diys():
     diy = dict()
 
-    diy["Accessory"] = accessories.get_accessories()
+    diy["Accessory"] = equipment.get_accessories()
     diy["Fence"] = fences.get_fences()
     diy["Houseware"] = housewares.get_housewares()
     diy["Miscellaneous"] = miscellaneous.get_misc()
