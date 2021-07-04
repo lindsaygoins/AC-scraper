@@ -36,7 +36,7 @@ def create_file():
     sea_creatures = parse_data()
     f = open("data/sea_creatures.txt", "a")
     for key in sea_creatures:
-        query = "(" + key + "," + sea_creatures[key] + "," + "0" + ")" + ","
+        query = "(" + key + "," + sea_creatures[key] + "," + "1" + ")" + ","
         f.write(query)
     f.close()
 
