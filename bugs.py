@@ -37,7 +37,7 @@ def parse_data():
 
 def create_file():
     bugs = parse_data()
-    f = open("data/final_bugs.txt", "a")
+    f = open("data/bugs.txt", "a")
     for key in bugs:
         query = "(" + key + ","
         for item in bugs[key]:
