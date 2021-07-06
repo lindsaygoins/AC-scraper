@@ -34,7 +34,7 @@ def parse_data():
 
 def create_file():
     fish = parse_data()
-    f = open("data/fish.txt", "a")
+    f = open("data/final/fish.txt", "a")
     for key in fish:
         query = "(" + key + ","
         for item in fish[key]:
